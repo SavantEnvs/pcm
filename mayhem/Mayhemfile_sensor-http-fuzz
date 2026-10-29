@@ -1,0 +1,8 @@
+project: savantenvs/pcm
+target: sensor-http-fuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sensor-http-fuzz/testsuite
+cmds:
+  - cmd: /mayhem/sensor-http-fuzz
+    libfuzzer: true
